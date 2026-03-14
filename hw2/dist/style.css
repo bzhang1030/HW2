@@ -1,0 +1,140 @@
+body {
+  margin: 0;
+  height: 100vh;
+  background-color: #f0f0f5;
+  font-family: 'Courier New', Courier, monospace; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  background-color: #0b1a2a;
+  background-image: url('https://images.unsplash.com/photo-1551244072-5d12893278ab?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80');
+  background-size: cover; 
+  background-position: center bottom; 
+  background-repeat: no-repeat;
+}
+
+.disaster-container {
+  position: relative;
+  width: 90vw;
+  height: 90vh;
+  background: white;
+  border: 2px dashed #ccc;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+  
+  background: rgba(255, 255, 255, 0.15); 
+  backdrop-filter: blur(8px); 
+  border-radius: 20px; /
+}
+
+.value-display {
+  position: absolute;
+  top: 30px;
+  left: 30px;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #333;
+}
+
+
+.submit-btn {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  padding: 15px 40px;
+  font-size: 1.2rem;
+  background-color: #2AA9A9;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+}
+
+.submit-btn:hover {
+  background-color: #ff6b81;
+}
+
+
+.slider-wrapper {
+  position: absolute;
+  bottom: 50px;
+  left: 50px;
+  height: 400px; 
+}
+
+.slider-track {
+  width: 30px;
+  height: 100%;
+  background: #2f3542;
+  border-radius: 15px;
+  position: relative;
+  box-shadow: inset 0 0 15px rgba(0,0,0,0.8);
+}
+
+
+.slider-handle {
+  width: 70px;
+  height: 50px;
+  background: linear-gradient(135deg, #747d8c, #57606f);
+  position: absolute;
+  left: -20px; 
+  bottom: 0; 
+  border-radius: 5px;
+  cursor: grab;
+  box-shadow: 0 8px 15px rgba(0,0,0,0.6);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+
+.slider-handle:active {
+  cursor: grabbing;
+}
+
+.grip-line {
+  width:40px;
+  height: 3px;
+  background: #ced6e0;
+  opacity: 0.5;
+}
+
+
+.fishing-rod {
+  position: absolute;
+  top: 10px;
+  left: 60px; 
+  width: 500px; 
+  height: 4px;
+  background-color: #2c3e50;
+  transform-origin: left center;
+  transform: rotate(-20deg); 
+  border-radius: 2px;
+}
+
+.fishing-line {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 2px;
+  height: 230px; 
+  background-color: #bdc3c7;
+  transform-origin: top center;
+  transform: rotate(20deg); 
+}
+
+.fish {
+  position: absolute;
+  bottom: -25px;
+  left: -20px;
+  font-size: 2.5rem; 
+  transform: rotate(90deg); 
+}
+
+
+
+.slider-handle.falling {
+  transition: bottom 0.4s cubic-bezier(0.55, 0.085, 0.68, 0.53); 
+}
